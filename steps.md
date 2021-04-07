@@ -12,7 +12,7 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu (all the steps from 1.1 to 1.7, 
 
 4- create catkin_ws (src), as:
 
-``
+`
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/
 $ catkin_make
@@ -20,11 +20,11 @@ $ catkin_make
 $ source devel/setup.bash
 
 $ echo $ROS_PACKAGE_PATH
-``
+`
 should gives: /home/youruser/catkin_ws/src:/opt/ros/kinetic/share
 
 5- write those:
-``
+`
 source /opt/ros/kinetic/setup.bash
 mkdir -p $HOME/catkin_ws/src
 cd $HOME/catkin_ws
@@ -33,7 +33,7 @@ rosdep update
 rosdep install --from-paths src/ --ignore-src
 catkin_make
 source $HOME/devel/setup.bash
-``
+`
 6- then in new terminal: `roscore`
 
 7- in another new terminal (pc ip: 10.1.1.5, robot ip: 10.1.1.4):
