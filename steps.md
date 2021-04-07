@@ -47,7 +47,8 @@ roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=10.1.1.4
 source devel/setup.bash
 rosrun ur_modern_driver test_move.py
 ```
-...........................
+--------------------------------
+
 note: in every new terminal you should '`source devel/setup.bash`'
 or you can add that to the bash file:
 `sudo nano ~/.bashrc`
@@ -60,6 +61,7 @@ press ctrl+o to save and press enter
 then ctrl+x to exit
 
 close the terminal then open it again
-...........................
+
+--------------------------------
 
 Thanks for gavanderhoorn and miguelprada for their help.
