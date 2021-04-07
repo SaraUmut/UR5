@@ -34,13 +34,15 @@ source catkin_ws/devel/setup.bash
 ```
 6- then in new terminal: `roscore`
 
-7- in another new terminal (pc ip: 10.1.1.5, robot ip: 10.1.1.4):
+7- in another new terminal run the ur driver as follows:
+(pc ip: 10.1.1.5, robot ip: 10.1.1.4):
 ```
 source catkin_ws/devel/setup.bash
 roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=10.1.1.4
 ```
 
-8- in another new terminal:
+8- The ur_modern_driver provides a script (test_move.py) which you can run as follows to test if the driver and everything is working properly 
+BE AWARE: the robot will move fastly between different positions so keep your hand on the emergency button, or preferably edit the code to move to a position that you know.
 ```
 source catkin_ws/devel/setup.bash
 rosrun ur_modern_driver test_move.py
