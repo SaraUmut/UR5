@@ -25,14 +25,12 @@ should gives: /home/youruser/catkin_ws/src:/opt/ros/kinetic/share
 
 5- write those:
 ```
-source /opt/ros/kinetic/setup.bash
-mkdir -p $HOME/catkin_ws/src
 cd $HOME/catkin_ws
 git -C src/ clone -b kinetic-devel https://github.com/ros-industrial/ur_modern_driver.git
 rosdep update
 rosdep install --from-paths src/ --ignore-src
 catkin_make
-source $HOME/devel/setup.bash
+source catkin_ws/devel/setup.bash
 ```
 6- then in new terminal: `roscore`
 
@@ -44,7 +42,7 @@ roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=10.1.1.4
 
 8- in another new terminal:
 ```
-source devel/setup.bash
+source catkin_ws/devel/setup.bash
 rosrun ur_modern_driver test_move.py
 ```
 --------------------------------
@@ -53,7 +51,7 @@ note: in every new terminal you should '`source devel/setup.bash`'
 or you can add that to the bash file:
 `sudo nano ~/.bashrc`
 go to the end of it, you will find this line:
-`source /opt/ros/indigo/setup.bash`
+`source /opt/ros/kinetic/setup.bash`
 after it you should add this line:
 `source ~/catkin_ws/devel/setup.bash`
 
